@@ -18,7 +18,9 @@ val dbModule = module {
     }
 
     single { get<WordRoomDatabase>().wordDao() }
+}
 
+val repositoryModule = module {
     single { WordRepository(get()) }
 }
 
